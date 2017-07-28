@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#box{
+		border: 1px solid black;
+		width: 40%;
+		background-color:pink;
+	}
+	#box1{
+		border: 1px solid blue;
+		width: 30%;
+		background-color: grey;
+		padding: 20px;
+		margin: 30px;
+	    text-align: center;
+	}
+	</style>
+</head>
+<body>
+   <div id="box">
+   	<div id="box1" class="boxdiv">
+   		<!-- <button id="btn" onclick="removeHandler()">click</button> -->
+   	</div>
+   </div>
+
+
+<script>
+document.getElementById("box1").addEventListener("mouseover", displayDate);
+function displayDate() {
+    document.getElementById("box1").innerHTML = Date();
+
+
+}
+console.log(box1);
+
+document.getElementById("box").addEventListener("click", displayDates);
+function displayDates() {
+    alert("hello word");
+}
+function removeHandler(e) {
+    document.getElementById("box").removeEventListener("click",displayDates);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <form name="f1">
+    	<table>
+    		<tr>
+    		<td>
+    			FistName
+    		</td>
+    			<td>
+    				<input type="text" name="FistName" id="txtfname">
+    			</td>
+    		</tr>
+
+    		<tr>
+    		<td>
+    			LastName
+    		</td>
+    			<td>
+    				<input type="text" name="LastName" id="txtlname">
+    			</td>
+    		</tr>
+
+    		<tr>
+    		<td>
+    			EmailId:
+    		</td>
+    			<td>
+    				<input type="text" name="EmailId" id="txtEmail">
+    			</td>
+    		</tr>
+
+    		<tr>
+    		<td>
+    			PhoneNumber
+    		</td>
+    			<td>
+    				<input type="text" name="phonenumber" id="txtphno">
+    			</td>
+    		</tr>
+    		
+    	</table>
+
+    			<select name="slection">
+    				<option value="student">student</option>
+    				<option value="trainer">trainer</option>
+    			</select>
+    			<input type="submit" value="submit" onclick="myfun()">
+    		
+         </form>
+         <h1>o/p:</h1>
+         <p id="demo"></p>
+ <script type="text/javascript">
+ 
+ function myfun () {
+ 	var fname=document.getElementById('txtfname');
+ 	var lname=document.getElementById('txtlname');
+ 	var Email=document.getElementById('txtEmail');
+ 	var phonenumber=document.getElementById('txtphno');
+ 	var location =document.getElementById('demo').innerHTML=fname.value+lname.value+Email.value+phonenumber.value;
+ }
+ </script>
+</body>
+</html>

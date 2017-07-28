@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form values</title>
+</head>
+<body>
+<form id="f1">
+FirstName
+<input type="text" id="txtfname"><br>
+LastName
+<input type="text" id="txtlname"><br>
+
+</form>
+<input type="submit" value="submit" onclick="save()">
+<input type="submit" value="display" onclick="displ()">
+
+<h1>output</h1>
+<p id='display'></p>
+<script type="text/javascript">
+	function dis(){
+		// var fname=document.getElementById('txtfname');
+		// var lname=document.getElementById('txtlname');
+		// document.getElementById('display').innerHTML=document.getElementById('txtfname').value+document.getElementById('txtlname').value;
+		var fname=document.getElementById('txtfname');
+		var lname=document.getElementById('txtlname');
+		document.getElementById('display').innerHTML=localStorage.name;
+  }
+	function save(){ 
+		var fname=document.getElementById('txtfname');
+		var lname=document.getElementById('txtlname');
+
+	    localStorage.name=fname.value+lname.value;
+	}
+	//      var arr=[];
+	//     console.log(arr);
+	//      var arra1=fname.value+lname.value;
+	//       arr.push(arra1);
+	    
+
+     function displ(){
+     	var fname=document.getElementById('txtfname');
+		var lname=document.getElementById('txtlname');
+		document.getElementById('display').innerHTML=localStorage.name;
+		var arr=[];
+		var numm=fname.value;
+		var numm2=lname.value;
+		arr.push({
+			numm:fname,
+			numm2:lname
+		})
+
+
+     }
+
+
+	
+</script>
+</body>
+</html>

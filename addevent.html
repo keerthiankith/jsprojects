@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+   <button>cilck me</button>
+<script type="text/javascript">
+	var btn=document.querySelector("button");
+	btn.addEventlistner("cilck",addevent);
+
+	function addevent(){
+      console.log("djskkg");
+	setTimeout(function()
+	{
+		btn.removeEventlistner("click",addevent);
+	},2000)
+}
+	addevent();
+</script>
+</body>
+</html>
